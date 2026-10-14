@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand" id="brandName">🏗️ Shop Manager</div>
+    <nav id="nav">
+      <button data-view="dashboard" class="active">📊 Dashboard</button>
+      <button data-view="billing">🧾 New Bill</button>
+      <button data-view="sales">💰 Sales</button>
+      <button data-view="inventory">📦 Inventory</button>
+      <button data-view="orders">🚚 Orders</button>
+      <button data-view="customers">👥 Customers</button>
+      <button data-view="settings">⚙️ Settings</button>
+    </nav>
+    <div class="side-foot">Data is saved in this browser. Take backups regularly (Settings).</div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button id="menuBtn" class="menu-btn">☰</button>
+      <h1 id="title">Dashboard</h1>
+      <span id="today" class="muted"></span>
+    </header>
+    <section id="view"></section>
+  </main>
+</div>
+
+<dialog id="dlg">
+  <form method="dialog" id="dlgForm">
+    <h3 id="dlgTitle"></h3>
+    <div id="dlgBody"></div>
+    <div class="dlg-actions">
+      <button type="button" class="btn ghost" id="dlgCancel">Cancel</button>
+      <button type="submit" class="btn" id="dlgOk">Save</button>
+    </div>
+  </form>
+</dialog>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
